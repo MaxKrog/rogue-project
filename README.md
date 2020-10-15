@@ -1,6 +1,6 @@
 
-# Valtech - Connecting the dots SQL
-Welcome to Valtech connecting the dots SQL Project
+# Rogue project
+Welcome to this Rogue Project. It will be moved to a more private place soon.
 
 All datatransformation (from raw to analysis & report-ready data) happening inside BigQuery is defined inside this project.
 
@@ -22,22 +22,23 @@ https://medium.com/@maxkrog/my-local-environment-setup-for-data-engineering-on-g
 
 There's two parts to setting up this project locally
 1. Setting up your dbt profile in ~/.dbt/profiles.yml
-2. DBT Project setup
+2. Local project setup
 More on these two setups below.
 
 #### DBT Profile
 The first part of setting up this project locally is to provide your own dbt-profile to be used by the project. Your DBT profile should be put in ~/.dbt/profiles.yml
 An example setup of this file looks like below.
 An example file named 'example_profiles.yml' exists in the root of this project.
+
 To initialize it:
 1. Copy the example profile to ~/.dbt/profiles.yml
 2. Update the keyfile variable to point to a service account json key
 
-####  DBT Project
+####  Local project setup
 This assumes some knowledge about virtual environments (venv).
 More info about venv can be found here: https://docs.python.org/3/tutorial/venv.html
 
-If you're used a DBT-folder before and just need to a quickstart, these are the steps to follow from your terminal. Make sure your terminal is in the root folder of this project before executing the commands.
+If you've used a venv/DBT project before and just need a quickstart, these are the steps to follow from your terminal. Make sure your terminal is in the root folder of this project before executing the commands.
 
     python -m venv venv                 # Creates a folder 'venv'
     source venv/bin/activate            # Jumps inside the virtual environment
