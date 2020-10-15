@@ -37,14 +37,16 @@ models:
         example:
             enabled: false
             materialized: view
+        linkedin_source:
+            enabled: true
+            schema: "staging_linkedin" #Please note that this is added to the schema defined in your profile.
         linkedin:
             enabled: true
             materialized: view
-        linkedin_source:
-            schema: "staging"
-
+            schema: reporting_linkedin
 
 
 vars:
     linkedin_schema: ingestion_fivetran_linkedin_ads #https://hub.getdbt.com/fivetran/linkedin/latest/
+    linkedin__use_local_currency: true
     #linkedin_database: your_schema_name     #https://hub.getdbt.com/fivetran/linkedin/latest/

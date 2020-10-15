@@ -1,6 +1,6 @@
 {% macro timestamp_add(datepart, interval, from_timestamp) -%}
 
-{{ adapter_macro('linkedin.timestamp_add', datepart, interval, from_timestamp) }}
+{{ adapter_macro('timestamp_add', datepart, interval, from_timestamp) }}
 
 {%- endmacro %}
 

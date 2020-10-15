@@ -8,7 +8,7 @@ with base as (
     select
         creative_id,
         day as date_day,
-        clicks, 
+        clicks,
         impressions,
         {% if var('linkedin__use_local_currency') %}
         cost_in_local_currency as cost

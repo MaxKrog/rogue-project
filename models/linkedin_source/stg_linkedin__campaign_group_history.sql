@@ -5,7 +5,7 @@ with base as (
 
 ), fields as (
 
-    select 
+    select
         id as campaign_group_id,
         last_modified_time as last_modified_at,
         account_id,
@@ -15,9 +15,9 @@ with base as (
 
 ), valid_dates as (
 
-    select 
+    select
         *,
-        case 
+        case
             when row_number() over (partition by campaign_group_id order by last_modified_at) = 1 then created_at
             else last_modified_at
         end as valid_from,
@@ -26,7 +26,7 @@ with base as (
 
 ), surrogate_key as (
 
-    select 
+    select
         *,
         {{ dbt_utils.surrogate_key(['campaign_group_id','last_modified_at']) }} as campaign_group_version_id
     from valid_dates
