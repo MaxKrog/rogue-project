@@ -8,7 +8,7 @@ valtech_connecting_the_dots:
       dataset: dbt
       location: EU
       threads: 1
-      keyfile: /Users/max.krog/code/service_accounts/valtech-connecting-the-dots-d815b50b94c6.json
+      keyfile: PATH_TO_KEYFILE.json #This needs to be updated to point to a service account key with "BigQuery User" rights on the gcp-project.
       timeout_seconds: 300
       priority: interactive
       retries: 1
