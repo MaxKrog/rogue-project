@@ -1,5 +1,5 @@
 
-# Connecting the dots SQL
+# Valtech - Connecting the dots SQL
 Welcome to Valtech connecting the dots SQL Project
 
 All datatransformation (from raw to analysis & report-ready data) happening inside BigQuery is defined inside this project.
@@ -7,10 +7,10 @@ All datatransformation (from raw to analysis & report-ready data) happening insi
 
 ## Prerequisites:
 
-**Python 3.7.5 (other version above 3.6 most probably works)**
-Understanding of the terminal
-Understanding of virtual environments in Python
-Basic understanding of DBT.
+- **Python 3.7.5 (other version above 3.6 most probably works)**
+- Understanding of the terminal
+- Understanding of virtual environments in Python
+- Basic understanding of DBT.
 
 If you're new to DBT, walk through this guide to get a basic understanding before jumping into this project:
 https://docs.getdbt.com/tutorial/setting-up/
@@ -21,28 +21,18 @@ https://medium.com/@maxkrog/my-local-environment-setup-for-data-engineering-on-g
 ## Local setup:
 
 There's two parts to setting up this project locally
-1 - Setting up your dbt profile in ~/.dbt/profiles.yml
-2 - DBT Project setup
+1. Setting up your dbt profile in ~/.dbt/profiles.yml
+2. DBT Project setup
 More on these two setups below.
 
 #### DBT Profile
 The first part of setting up this project locally is to provide your own dbt-profile to be used by the project. Your DBT profile should be put in ~/.dbt/profiles.yml
-An example setup of this file looks like below. For further reference please find the 'example_profiles.yml' file in the main folder of this project.
+An example setup of this file looks like below.
+An example file named 'example_profiles.yml' exists in the root of this project.
+To initialize it:
+1. Copy the example profile to ~/.dbt/profiles.yml
+2. Update the keyfile variable to point to a service account json key
 
-	valtech_connecting_the_dots:
-	  target: dev
-	  outputs:
-	    dev:
-	      type: bigquery
-	      method: service-account
-	      project: valtech-connecting-the-dots
-	      dataset: dbt
-	      location: EU
-	      threads: 1
-	      keyfile: PATH_TO_KEYFILE.json #This needs to be updated to point to a service account key with "BigQuery User" rights on the project.
-	      timeout_seconds: 300
-	      priority: interactive
-	      retries: 1
 ####  DBT Project
 This assumes some knowledge about virtual environments (venv).
 More info about venv can be found here: https://docs.python.org/3/tutorial/venv.html
@@ -53,7 +43,7 @@ If you're used a DBT-folder before and just need to a quickstart, these are the 
     source venv/bin/activate            # Jumps inside the virtual environment
 
     pip install -r requirements.txt     # Installs relevant packages (dbt) to the virtualenvironment
-    dbt deps 							#Fetches dbt dependencies from dbt-hub to the folder dbt_modules
+    dbt deps 							#Fetches dbt dependencies defined in packages.yml
 
     ...do work...
 
