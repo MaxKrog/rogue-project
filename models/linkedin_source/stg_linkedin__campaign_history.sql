@@ -12,7 +12,12 @@ with base as (
         campaign_group_id,
         created_time as created_at,
         name as campaign_name,
-        cast(version_tag as numeric) as version_tag
+        cast(version_tag as numeric) as version_tag,
+        cost_type,
+        creative_selection,
+        format as campaign_format,
+        objective_type,
+        optimization_target_type
     from base
 
 ), valid_dates as (

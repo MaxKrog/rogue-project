@@ -44,8 +44,17 @@ with metrics as (
 
         campaigns.campaign_name,
         campaigns.campaign_id,
+        campaigns.version_tag,
+        campaigns.cost_type,
+        campaigns.creative_selection,
+        campaigns.campaign_format,
+        campaigns.objective_type,
+        campaigns.optimization_target_type,
+
+
         campaign_groups.campaign_group_name,
         campaign_groups.campaign_group_id,
+
 
         accounts.account_name,
         accounts.account_id,
