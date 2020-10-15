@@ -29,9 +29,6 @@ with metrics as (
 
         metrics.date_day,
 
-        metrics.daily_creative_id,
-        metrics.creative_id,
-
         accounts.account_name,
         accounts.account_id,
 
@@ -47,6 +44,8 @@ with metrics as (
         campaigns.objective_type,
         campaigns.optimization_target_type,
 
+        metrics.daily_creative_id,
+        metrics.creative_id,
         creatives.creative_type,
         creatives.base_url,
         creatives.url_host,
@@ -59,8 +58,71 @@ with metrics as (
 
         metrics.cost,
         metrics.impressions,
-        metrics.clicks
+        metrics.clicks,
 
+        metrics.action_clicks,
+        metrics.ad_unit_clicks,
+        metrics.approximate_unique_impressions,
+        metrics.card_impressions,
+        metrics.card_clicks,
+
+
+        metrics.comment_likes,
+        metrics.comments,
+        metrics.company_page_clicks,
+        metrics.conversion_value_in_local_currency,
+        metrics.cost_in_local_currency,
+        metrics.cost_in_usd,
+        metrics.external_website_conversions,
+        metrics.external_website_post_click_conversions,
+        metrics.external_website_post_view_conversions,
+        metrics.follows,
+        metrics.full_screen_plays,
+
+        metrics.landing_page_clicks,
+        metrics.lead_generation_mail_contact_info_shares,
+        metrics.lead_generation_mail_interested_clicks,
+        metrics.likes,
+        metrics.one_click_lead_form_opens,
+        metrics.one_click_leads,
+        metrics.opens,
+        metrics.other_engagements,
+        metrics.shares,
+        metrics.text_url_clicks,
+        metrics.total_engagements,
+
+        metrics.video_starts,
+        metrics.video_views,
+        metrics.video_first_quartile_completions,
+        metrics.video_midpoint_completions,
+        metrics.video_third_quartile_completions,
+        metrics.video_completions,
+
+        metrics.viral_card_clicks,
+        metrics.viral_card_impressions,
+        metrics.viral_clicks,
+        metrics.viral_comment_likes,
+        metrics.viral_comments,
+        metrics.viral_company_page_clicks,
+        metrics.viral_external_website_conversions,
+        metrics.viral_external_website_post_click_conversions,
+        metrics.viral_external_website_post_view_conversions,
+        metrics.viral_follows,
+        metrics.viral_full_screen_plays,
+        metrics.viral_impressions,
+        metrics.viral_landing_page_clicks,
+        metrics.viral_likes,
+        metrics.viral_one_click_lead_form_opens,
+        metrics.viral_one_click_leads,
+        metrics.viral_other_engagements,
+        metrics.viral_shares,
+        metrics.viral_total_engagements,
+        metrics.viral_video_completions,
+        metrics.viral_video_first_quartile_completions,
+        metrics.viral_video_midpoint_completions,
+        metrics.viral_video_starts,
+        metrics.viral_video_third_quartile_completions,
+        metrics.viral_video_views
 
     from metrics
     left join creatives
