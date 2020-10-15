@@ -32,11 +32,18 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  valtech_connecting_the_dots:
-      # Applies to all files under models/example/
-      example:
-          enabled: false
-          materialized: view
+    valtech_connecting_the_dots:
+        # Applies to all files under models/example/
+        example:
+            enabled: false
+            materialized: view
+    #This targets the linkedin package
+    linkedin:
+        enabled: true
+        materialized: view
+    linkedin_source:
+        schema: "staging"
+
 
 
 vars:
