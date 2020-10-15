@@ -37,12 +37,11 @@ models:
         example:
             enabled: false
             materialized: view
-    #This targets the linkedin package
-    linkedin:
-        enabled: true
-        materialized: view
-    linkedin_source:
-        schema: "staging"
+        linkedin:
+            enabled: true
+            materialized: view
+        linkedin_source:
+            schema: "staging"
 
 
 
