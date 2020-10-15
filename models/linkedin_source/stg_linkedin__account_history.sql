@@ -5,7 +5,7 @@ with base as (
 
 ), fields as (
 
-    select 
+    select
         id as account_id,
         last_modified_time as last_modified_at,
         created_time as created_at,
@@ -16,9 +16,9 @@ with base as (
 
 ), valid_dates as (
 
-    select 
+    select
         *,
-        case 
+        case
             when row_number() over (partition by account_id order by version_tag) = 1 then created_at
             else last_modified_at
         end as valid_from,
@@ -27,7 +27,7 @@ with base as (
 
 ), surrogate_key as (
 
-    select 
+    select
         *,
         {{ dbt_utils.surrogate_key(['account_id','version_tag']) }} as account_version_id
     from valid_dates

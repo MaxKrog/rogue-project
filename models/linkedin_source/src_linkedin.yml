@@ -56,7 +56,7 @@ sources:
           - name: version_tag
             description: An integer representation of the version of the creative.
 
-          - name: type 
+          - name: type
             description: |
                 TEXT_AD - Text with Sponsored Link to landing page on your site.
                 SPONSORED_STATUS_UPDATE - Sponsored status update from a profile page.
@@ -70,7 +70,7 @@ sources:
 
           - name: click_uri
             description: |
-                Required when creative type is TEXT_AD. Maximum character limit of 500 after URL encoding all special characters. 
+                Required when creative type is TEXT_AD. Maximum character limit of 500 after URL encoding all special characters.
                 Limit does not include the "https://" prefix.
 
       - name: campaign_history
@@ -78,45 +78,45 @@ sources:
         columns:
           - name: id
             description: Unique internal ID representing the campaign.
-              
+
           - name: last_modified_time
             description: The timestamp of when the version was updated.
-              
+
           - name: account_id
             description: The ID of the account the campaign belongs to.
-              
+
           - name: campaign_group_id
             description: The ID of the campaign group the campaign belongs to.
-              
+
           - name: created_time
             description: The timestamp of when the campaign was created.
-              
+
           - name: name
             description: A label for the campaign.
-              
+
           - name: version_tag
             description: An integer representation of the version of the campaign.
-              
+
       - name: campaign_group_history
         description: Each record represents a 'version' of a campaign group.
         columns:
           - name: id
             description: Unique internal ID representing the campaign group.
-            
+
           - name: last_modified_time
             description: The timestamp of when the version was updated.
-            
+
           - name: account_id
             description: The ID of the account the campaign group belongs to.
-            
+
           - name: created_time
             description: The timestamp of when the campaign group was created.
-            
+
           - name: name
             description: A label for the campaign group.
-            
+
       - name: account_history
-        description: Each record represents a 'version' of an account. 
+        description: Each record represents a 'version' of an account.
         columns:
           - name: id
             description: Unique internal ID representing the account.
