@@ -32,15 +32,11 @@ with metrics as (
         metrics.daily_creative_id,
         metrics.creative_id,
 
-        creatives.creative_type,
-        creatives.base_url,
-        creatives.url_host,
-        creatives.url_path,
-        creatives.utm_source,
-        creatives.utm_medium,
-        creatives.utm_campaign,
-        creatives.utm_content,
-        creatives.utm_term,
+        accounts.account_name,
+        accounts.account_id,
+
+        campaign_groups.campaign_group_name,
+        campaign_groups.campaign_group_id,
 
         campaigns.campaign_name,
         campaigns.campaign_id,
@@ -51,13 +47,15 @@ with metrics as (
         campaigns.objective_type,
         campaigns.optimization_target_type,
 
-
-        campaign_groups.campaign_group_name,
-        campaign_groups.campaign_group_id,
-
-
-        accounts.account_name,
-        accounts.account_id,
+        creatives.creative_type,
+        creatives.base_url,
+        creatives.url_host,
+        creatives.url_path,
+        creatives.utm_source,
+        creatives.utm_medium,
+        creatives.utm_campaign,
+        creatives.utm_content,
+        creatives.utm_term,
 
         metrics.cost,
         metrics.impressions,
