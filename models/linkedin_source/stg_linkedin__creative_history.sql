@@ -18,7 +18,7 @@ with base as (
 
 ), url_fields as (
 
-    select 
+    select
         *,
         {{ dbt_utils.split_part('click_uri', "'?'", 1) }} as base_url,
         {{ dbt_utils.get_url_host('click_uri') }} as url_host,
@@ -32,9 +32,9 @@ with base as (
 
 ), valid_dates as (
 
-    select 
+    select
         *,
-        case 
+        case
             when row_number() over (partition by creative_id order by version_tag) = 1 then created_at
             else last_modified_at
         end as valid_from,
@@ -43,7 +43,7 @@ with base as (
 
 ), surrogate_key as (
 
-    select 
+    select
         *,
         {{ dbt_utils.surrogate_key(['creative_id','version_tag']) }} as creative_version_id
     from valid_dates
