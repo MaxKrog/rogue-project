@@ -9,29 +9,30 @@ with metrics as (
     from {{ ref('stg_linkedin__creative_history') }}
 
 ), campaigns as (
-    
+
     select *
     from {{ ref('stg_linkedin__campaign_history') }}
 
 ), campaign_groups as (
-    
+
     select *
     from {{ ref('stg_linkedin__campaign_group_history') }}
 
 ), accounts as (
-    
+
     select *
     from {{ ref('stg_linkedin__account_history') }}
 
 ), joined as (
 
     select
-        metrics.creative_id,
+
         metrics.date_day,
-        metrics.clicks,
-        metrics.impressions,
-        metrics.cost,
+
         metrics.daily_creative_id,
+        metrics.creative_id,
+
+        creatives.type,
         creatives.base_url,
         creatives.url_host,
         creatives.url_path,
@@ -40,12 +41,20 @@ with metrics as (
         creatives.utm_campaign,
         creatives.utm_content,
         creatives.utm_term,
+
         campaigns.campaign_name,
         campaigns.campaign_id,
         campaign_groups.campaign_group_name,
         campaign_groups.campaign_group_id,
+
         accounts.account_name,
-        accounts.account_id
+        accounts.account_id,
+
+        metrics.cost,
+        metrics.impressions,
+        metrics.clicks
+
+
     from metrics
     left join creatives
         on metrics.creative_id = creatives.creative_id
