@@ -32,7 +32,7 @@ with metrics as (
         metrics.daily_creative_id,
         metrics.creative_id,
 
-        creatives.type,
+        creatives.creative_type,
         creatives.base_url,
         creatives.url_host,
         creatives.url_path,

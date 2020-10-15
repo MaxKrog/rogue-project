@@ -21,8 +21,9 @@ with base as (
         action_clicks,
         ad_unit_clicks,
         approximate_unique_impressions,
-        card_clicks,
         card_impressions,
+        card_clicks,
+
 
         comment_likes,
         comments,
@@ -47,12 +48,14 @@ with base as (
         shares,
         text_url_clicks,
         total_engagements,
-        video_completions,
+
+        video_starts,
+        video_views,
         video_first_quartile_completions,
         video_midpoint_completions,
-        video_starts,
         video_third_quartile_completions,
-        video_views,
+        video_completions,
+
         viral_card_clicks,
         viral_card_impressions,
         viral_clicks,
