@@ -59,9 +59,10 @@ Note that when you've left (deactivated) the venv and want to enter it again, yo
 
 ### Some useful DBT commands:
     dbt deps 	# Fetches dbt dependencies from dbt-hub to the folder dbt_modules
-    dbt clean 	# Cleans folder defined in
+    dbt clean 	# Cleans folder defined as "clean-targets" in dbt_project.yml
     dbt run 	# Runs all models defined in /models
     dbt run --models=linkedin_source.stg_linkedin__account_history #Runs one specific model
+    dbt run --models=linkedin_source #Runs models in "linkedin_source" folder
 
 
 
