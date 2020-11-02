@@ -65,14 +65,32 @@ If you've used a venv/DBT project before and just need a quickstart, these are t
 Note that when you've left (deactivated) the venv and want to enter it again, you do not need to install pip packages again. They are saved in the venv-folder.
 
 
-## Working inside the project
+## Working in the project
 
-### Some useful DBT commands:
+#### DBT - Referencing tables
+
+There's two ways to reference another table within DBT.
+
+    from {{ source('linkedin','account_history') }} # References a table defined in a "source.yml" file.
+
+    from {{ ref('stg_linkedin__ad_analytics_by_creative') }} # References a table by SQL-file name inside the DBT project.
+
+
+#### Fivetran - Linkedin Ads
+Fivetran replicates the tables available via Linkedins API to tables in the dataset **ingestion_fivetran_linkedin_ads**
+For an ERD of the tables replicated, see this link:
+https://docs.google.com/presentation/d/1nwR5efra1p3S1uOwUgU9Wdx7WBKXE7onxNDffK0IpgM/edit#slide=id.g311502b468_5_443
+
+
+#### Some useful DBT commands:
     dbt deps 	# Fetches dbt dependencies from dbt-hub to the folder dbt_modules
     dbt clean 	# Cleans folder defined as "clean-targets" in dbt_project.yml
+
     dbt run 	# Runs all models defined in /models
     dbt run --models=linkedin_source.stg_linkedin__account_history #Runs one specific model
     dbt run --models=linkedin_source #Runs models in "linkedin_source" folder
+
+    dbt compile # Compiles transformations inside "analysis"-folder. Outputs are saved in ./target/compiled/valtech_connecting_the_dots/analysis
 
 
 
