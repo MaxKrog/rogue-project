@@ -27,12 +27,14 @@ More on these two setups below.
 
 #### DBT Profile
 The first part of setting up this project locally is to provide your own dbt-profile to be used by the project. Your DBT profile should be put in ~/.dbt/profiles.yml
-An example setup of this file looks like below.
-An example file named 'example_profiles.yml' exists in the root of this project.
+An example file named 'profiles.yml.example' exists in the root of this project.
 
 To initialize it:
 1. Copy the example profile to ~/.dbt/profiles.yml
 2. Update the keyfile variable to point to a service account json key
+
+For more information on setting up your DBT-profile, see this post:
+https://docs.getdbt.com/dbt-cli/configure-your-profile/
 
 ####  Local project setup
 This assumes some knowledge about virtual environments (venv).
