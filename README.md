@@ -30,8 +30,9 @@ More on these three setups below.
 #### 1. Cloning the repo
 The first part of setting up this project locally is to clone the repo.
 Inside your terminal, navigate to a suitable parent folder and execute:
+
     git clone https://github.com/MaxKrog/rogue-project.git
-    cd rogue-project #You are now inside the project
+    cd rogue-project #You are now inside the project folder
 
 #### 2. DBT Profile
 The second part of setting up this project locally is to provide your own dbt-profile to be used by the project. Your DBT profile should be put in ~/.dbt/profiles.yml
