@@ -20,7 +20,7 @@ https://medium.com/@maxkrog/my-local-environment-setup-for-data-engineering-on-g
 
 ## Local setup:
 
-There's two parts to setting up this project locally
+There's three parts to setting up this project locally:
 1. Cloning the repo to a local folder
 2. Setting up your dbt profile in ~/.dbt/profiles.yml
 3. Local project setup
@@ -36,6 +36,7 @@ Inside your terminal, navigate to a suitable parent folder and execute:
 
 #### 2. DBT Profile
 The second part of setting up this project locally is to provide your own dbt-profile to be used by the project. Your DBT profile should be put in ~/.dbt/profiles.yml
+
 An example file named 'profiles.yml.example' exists in the root of this project.
 
 To initialize it:
