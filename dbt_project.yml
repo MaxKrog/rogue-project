@@ -40,11 +40,11 @@ models:
         linkedin_source:
             enabled: true
             materialized: view
-            schema: "staging_linkedin" # Please note that this is pre-pended by the schema defined in your profile.
+            schema: "staging_linkedin" # Please note that this is pre-pended by the schema defined in your profile. https://docs.getdbt.com/docs/building-a-dbt-project/building-models/using-custom-schemas/
         linkedin:
             enabled: true
             materialized: view
-            schema: reporting_linkedin # Please note that this is pre-pended by the schema defined in your profile.
+            schema: reporting_linkedin # Please note that this is pre-pended by the schema defined in your profile. https://docs.getdbt.com/docs/building-a-dbt-project/building-models/using-custom-schemas/
 
 
 vars:
