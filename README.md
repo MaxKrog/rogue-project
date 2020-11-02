@@ -21,12 +21,20 @@ https://medium.com/@maxkrog/my-local-environment-setup-for-data-engineering-on-g
 ## Local setup:
 
 There's two parts to setting up this project locally
-1. Setting up your dbt profile in ~/.dbt/profiles.yml
-2. Local project setup
-More on these two setups below.
+1. Cloning the repo to a local folder
+2. Setting up your dbt profile in ~/.dbt/profiles.yml
+3. Local project setup
 
-#### DBT Profile
-The first part of setting up this project locally is to provide your own dbt-profile to be used by the project. Your DBT profile should be put in ~/.dbt/profiles.yml
+More on these three setups below.
+
+#### 1. Cloning the repo
+The first part of setting up this project locally is to clone the repo.
+Inside your terminal, navigate to a suitable parent folder and execute:
+    git clone https://github.com/MaxKrog/rogue-project.git
+    cd rogue-project #You are now inside the project
+
+#### 2. DBT Profile
+The second part of setting up this project locally is to provide your own dbt-profile to be used by the project. Your DBT profile should be put in ~/.dbt/profiles.yml
 An example file named 'profiles.yml.example' exists in the root of this project.
 
 To initialize it:
@@ -36,7 +44,7 @@ To initialize it:
 For more information on setting up your DBT-profile, see this post:
 https://docs.getdbt.com/dbt-cli/configure-your-profile/
 
-####  Local project setup
+#### 3. Local project setup
 This assumes some knowledge about virtual environments (venv).
 More info about venv can be found here: https://docs.python.org/3/tutorial/venv.html
 
