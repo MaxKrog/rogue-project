@@ -78,8 +78,11 @@ There's two ways to reference another table within DBT.
 
 #### Fivetran - Linkedin Ads
 Fivetran replicates the tables available via Linkedins API to tables in the dataset **ingestion_fivetran_linkedin_ads**
+
 For an ERD of the tables replicated, see this link:
 https://docs.google.com/presentation/d/1nwR5efra1p3S1uOwUgU9Wdx7WBKXE7onxNDffK0IpgM/edit#slide=id.g311502b468_5_443
+
+Staging view are built from these relational tables in the "linkedin_source" models
 
 
 #### Some useful DBT commands:
