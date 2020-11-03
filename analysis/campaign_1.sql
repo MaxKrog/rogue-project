@@ -1,4 +1,4 @@
-with metrics as (
+with master as (
 
     select *
     from {{ ref('linkedin__master') }}
@@ -7,15 +7,9 @@ with metrics as (
 
 SELECT
     date_day,
-    campaign_group_name,
-    campaign_group_id,
     campaign_name,
     campaign_id,
-    campaign_format,
-    objective_type,
+    
+    cost
 
-    cost,
-    impressions,
-    clicks
-
-FROM metrics
+FROM master
