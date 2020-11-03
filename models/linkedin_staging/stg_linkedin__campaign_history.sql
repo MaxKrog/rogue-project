@@ -12,6 +12,13 @@ with base as (
         campaign_group_id,
         created_time as created_at,
         name as campaign_name,
+
+        SPLIT(name, "-")[SAFE_OFFSET(0)] AS nc_market,
+        SPLIT(name, "-")[SAFE_OFFSET(1)] AS nc_area,
+        SPLIT(name, "-")[SAFE_OFFSET(2)] AS nc_a,
+        SPLIT(name, "-")[SAFE_OFFSET(3)] AS nc_b,
+        SPLIT(name, "-")[SAFE_OFFSET(3)] AS nc_c,
+
         cast(version_tag as numeric) as version_tag,
         cost_type,
         creative_selection,

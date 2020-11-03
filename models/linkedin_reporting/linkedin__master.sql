@@ -37,6 +37,11 @@ with metrics as (
 
         campaigns.campaign_name,
         campaigns.campaign_id,
+        campaigns.nc_market,
+        campaigns.nc_area,
+        campaigns.nc_a,
+        campaigns.nc_b,
+        campaigns.nc_c,
         campaigns.version_tag,
         campaigns.cost_type,
         campaigns.creative_selection,
