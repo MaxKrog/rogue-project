@@ -41,11 +41,15 @@ An example file named 'profiles.yml.example' exists in the root of this project.
 
 To initialize it:
 1. Copy the example profile to ~/.dbt/profiles.yml
+
+    mkdir -p ~/.dbt # Create ~/.dbt folder if it does not already exist
+    cp profiles.yml.example ~/.dbt/profiles.yml # ATT! This copies the example file, but also overrides any previous file. Only use if first time setting up.
+
 2. Update the keyfile variable to point to a service account json key
 
 
     mkdir -p ~/.dbt # Create ~/.dbt folder if it does not already exist
-    
+
     cp profiles.yml.example ~/.dbt/profiles.yml # ATT! This copies the example file, but also overrides any previous file. Only use if first time setting up.
 
     open ~/.dbt
